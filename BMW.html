@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW台灣總代理汎德</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .header{
+            width: 100%;
+            max-width: 2560px;
+            margin: auto;
+            position: relative;
+        }
+        .header .car{
+            width: 100%;
+        }
+        .header .logo{
+            display: inline-block;
+            padding: 10px;
+        }
+        .header .nav_top{
+            display: flex;
+            width: 90%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border-bottom: 2px solid rgb(255, 255, 255);
+        }
+        .header .nav_left a{
+            display: inline-block;
+            padding: 25px 15px 20px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 16px;
+             
+        }
+        .header .nav_right a{
+            display: inline-block;
+            text-decoration: none;
+            padding: 20px 15px 17px;
+            /* background-color: rgba(255, 255, 255, 0.188); */
+        }
+        .header .nav_left{
+            width: 100%;
+            text-align: left;
+            display: none;
+        }
+        .header .nav_right{
+           width: 100%;
+           text-align: right;
+        }
+        .header .nav_left a:hover,.header .nav_right a:hover{
+            border-bottom: 4px solid blue;
+        }
+        .header_wrap .header_text{
+            width: 90%;
+            color: #ffffff;
+            position: absolute;
+            bottom: 20%;
+            right: 0;
+            left: 0;
+            margin: auto;
+            font-size: 30px;
+        }
+        .header_wrap .header_text a{
+            margin: 0 5px;
+        }
+        .header_wrap .header_text P{
+            font-size: 12PX;
+            display: none;
+        }
+        .header_wrap .header_text .one{
+            font-size: 60PX;
+            display: none;
+        }
+        .header_text .rectangle{
+            width: 75px;
+            height: 25px;
+            background-color: rgb(9, 118, 228);
+            border: rgba(0, 0, 0, 0);
+            border-radius: 5px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            /* margin-top: 30px; */
+        }
+        .header_text .rectangle a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .header_text .rectangle:hover{
+            background-color: rgb(13, 75, 220);
+        }
+        .header_text .rectangle2{
+            width: 75px;
+            height: 25px;
+            background-color: rgba(0, 0, 0, 0.425);
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 5px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+        }
+        .header_text .rectangle2 a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .header_text .rectangle2:hover{
+            border: 2px solid rgb(255, 255, 255);
+        }
+        
+        .service{
+            width: 100%;
+            max-width: 2560px;
+            margin: auto;
+            padding: 40px 0;
+        }
+        .service .p1{
+            font-size: 36px;
+            text-align: center;
+        }
+        .service .wrap{
+            width: 90%;
+            max-width: 2560px;
+            margin: auto;
+        }
+        .service .wrap .item_car{
+            width: 100%;
+            max-width: 2560px;
+            margin: auto ;
+            text-align: center;
+        }
+        .service .wrap .item_car img{
+            padding: 40px 0;
+        }
+        .service .wrap .item_car p{
+            font-size: 20px;
+            padding-bottom: 30px;
+        }
+        .service .wrap .item_car .service_button{
+            width: 100px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0);
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .wrap .item_car a{
+            text-decoration: none;
+            color: #000;
+        }
+        .wrap .item_car .service_button:hover{
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .product1{
+            width: 100%;
+            max-width: 2560px;
+            margin: auto;
+            padding-bottom: 40px;
+            position: relative;
+        }
+        .product1 p{
+            font-size: 12px;
+            text-align:left;
+            color: #7d7d7d;
+        }
+        .product1 .car2{
+            width: 100%;
+        }
+        .product1 .product1_wrap{
+            width: 90%;
+            position: absolute;
+            right: 0;
+            bottom: 30%;
+            left: 0;
+            margin: auto;
+            color: #ffffff;
+            /* background-color: #7d7d7d; */
+        }
+        .product1 .item_2 p{
+            font-size: 12px;
+            color: #ffffff;
+        }
+        .product1 .item_2 h1{
+            font-size: 16px;
+        }
+        .product1 .item_2 .product1_button{
+            width: 75px;
+            height: 25px;
+            background-color: rgb(13, 75, 220);
+            border: 1px solid rgb(13, 75, 220);
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+        .product1 .item_2 .product1_button a{
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .product1 .item_2 .product1_button:hover{
+            background-color: rgb(51, 102, 223);
+        }
+
+        .product2{
+            width: 100%;
+            max-width: 2560px;
+            margin: auto;
+            position: relative;
+        }
+        .product2 .car3{
+            width: 100%;
+        }
+        .product2 .product2_wrap{
+            width: 90%;
+            color: #ffffff;
+            /* background-color: bisque; */
+            position: absolute;
+            bottom: 20%;
+            right: 0;
+            left: 0;
+            margin: auto;
+            font-size: 12px;
+        }
+        .product2 .product2_wrap .i4{
+            font-size: 45px;
+            display: none;
+        }
+        .product2 .product2_wrap .content{
+            display: flex;
+        }
+        .product2 .product2_wrap .product2_button{
+            width: 75px;
+            height: 25px;
+            background-color: rgb(13, 75, 220);
+            border: 1px solid rgb(13, 75, 220);
+            border-radius: 5px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            margin-top: 30px;
+        }
+        .product2 .product2_button a{
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .product2 .product2_button:hover{
+            background-color: rgb(51, 102, 223);
+        }
+
+        .product3{
+            width: 100%;
+            max-width: 2560px;
+            margin: auto;
+            position: relative;
+            padding: 30px 0;
+        }
+        .product3 .car4{
+            width: 100%;
+        }
+        .product3 .product3_wrap{
+            width: 90%;
+            color: #ffffff;
+            /* background-color: bisque; */
+            position: absolute;
+            bottom: 20%;
+            right: 0;
+            left: 0;
+            margin: auto;
+            font-size: 12px;
+        }
+        .product3 .product3_wrap .content_2{
+            display: flex;
+        }
+        .product3 .product3_wrap .product3_button{
+            width: 75px;
+            height: 25px;
+            background-color: rgb(13, 75, 220);
+            border: 1px solid rgb(13, 75, 220);
+            border-radius: 5px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            margin-top: 30px;
+        }
+        .product3 .product3_button a{
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .product3 .product3_button:hover{
+            background-color: rgb(51, 102, 223);
+        }
+
+        .product4{
+            width: 100%;
+            margin: auto;
+            max-width: 2560px;
+            padding: 30px 0;
+            border-bottom: 1px solid #000;
+        }
+        .product4 .product4_wrap{
+            width: 100%;
+            margin: auto;
+            box-sizing: border-box;
+        }
+        .product4 .item{
+            width: 100%;
+        }
+        .product4 .item img{
+            width: 100%;
+            margin: auto;
+        }
+        .product4 .text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            line-height: 50px;
+        }
+        .product4 .text a{
+            text-decoration: none;
+            color: #000;
+        }
+
+        .path{
+            width: 100%;
+            margin: auto;
+        }
+        .path a{
+            text-decoration: none;
+            color: #000;
+        }
+        .path .wrap_allcar{
+            width: 90%;
+            display: flex;
+            margin: auto;
+            max-width: 2560px;
+        }
+        .path .wrap_allcar .allcar{
+            display: block;
+            padding: 40px 40px;
+        }
+        .path .wrap_allcar p{
+            display: block;
+            padding: 40px 0;
+
+        }
+        .path .path_wrap{
+            width: 100%;
+            margin: auto;
+            max-width: 2560px;
+            background-color: #ebebeb;
+        }
+        .path .path_wrap .website{
+            width: 90%;
+            margin: auto;
+            padding: 50px 0 50px 40px;
+        }
+        .path .path_wrap .website img{
+            margin: 0 10px;
+        }
+        .path .wrap_item{
+            width: 90%;
+            margin: auto;
+            display: flex;
+        }
+        .wrap_item .item{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            box-sizing: border-box;
+            line-height: 45px;
+        }
+        .wrap_item .item p{
+            font-size: 12px;
+        }
+
+        .footer{
+            width: 90%;
+            margin: auto;
+            max-width: 2560px;
+            padding: 20px 0;
+            position: relative;
+        }
+        .footer a{
+            text-decoration: none;
+            color: #000;
+            margin: 0 30px;
+            font-size: 12px;
+        }
+        .footer .item{
+            position: absolute;
+            top:50%;
+            right: 0;
+            transform: translate(0%, -50%);
+        }
+
+        @media screen and (min-width: 768px){
+            .header .nav_left{
+                display: unset;
+            }
+            .header_text .rectangle{
+                width: 150px;
+                height: 50px;
+                margin-top: 30px;
+            }
+            .header_text .rectangle2{
+                width: 150px;
+                height: 50px;
+                margin-top: 30px;
+            }
+            .header_wrap .header_text P{
+                font-size: 22PX;
+                padding-bottom: 10px;
+                display: block;
+            }
+            .header_wrap .header_text .one{
+                font-size: 200PX;
+                display: block;
+            }
+
+            .product1 .item_2 p{
+                font-size: 20px;
+                line-height: 50px;
+            }
+            .product1 .item_2 h1{
+                font-size: 50px;
+                line-height: 100px;
+            }
+            .product1 .item_2 .product1_button{
+                width: 250px;
+                height: 50px;
+            }
+
+            .product2 .product2_wrap .i4{
+                display: block;
+                font-size: 250px;
+            }
+            .product2 .product2_wrap{
+                font-size: 22px;
+            }
+            .product2 .product2_wrap .product2_button{
+                width: 150px;
+                height: 50px;
+            }
+
+            .product3 .product3_wrap{
+                font-size: 20px;
+            }
+            .product3 .product3_wrap .product3_button{
+                width: 150px;
+                height: 50px;
+            }
+            
+            .product4 .product4_wrap{
+            width: 90%;
+            margin: auto;
+            box-sizing: border-box;
+            }
+            .product4 .item{
+                width: 50%;
+            }
+            .product4 .product4_wrap{
+                display: flex;
+            }
+            .product4 .text{
+                margin: auto;
+            }
+
+            .service .wrap{
+                display: flex;
+            }
+         
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <nav class="nav_top"> 
+            <a href="#" class="logo"><img src="figure/logo.png" alt="BMW Logo"></a>
+            <nav class="nav_left">
+                <a href="#"><strong>所有車型</strong></a>
+                <a href="#"><strong>電動車</strong></a>
+                <a href="#"><strong>訂閱您的BMW</strong></a>
+                <a href="#"><strong>購車及優惠</strong></a>
+                <a href="#"><strong>探索BMW</strong></a>
+            </nav>
+            <nav class="nav_right">
+                <a href="#"><img src="figure/user.png" alt=""></a>
+                <a href="#"><img src="figure/shopping-cart.png" alt=""></a>
+                <a href="#"><img src="figure/location.png" alt=""></a>
+                <a href="#"><img src="figure/loupe.png" alt=""></a>
+            </nav>
+        </nav>
+        <div class="header_wrap">
+            <div class="header_text">
+                <p>THE NEW</p>
+                <P class="one">1</P>
+                <p>全新世代BMW 1系列</p>
+                <button class="rectangle"><a href="#">瞭解更多</a></button>
+                <button class="rectangle2"><a href="#">立即訂購</a></button>
+            </div>
+        </div>   
+        <img src="figure/f70_ice_stage_dsk_fb_16to7.webp" alt="" class="car">
+    </div>
+
+    <div class="service">
+        <p class="p1">線上預約及購車</p>
+        <div class="wrap">
+            <div class="item_car">
+                <img src="figure/car.png" alt="">
+                <p>Online Shop線上訂車</p>
+                <button class="service_button"><a href="#">立即訂購</a></button>
+            </div>
+            <div class="item_car">
+                <img src="figure/car2.png" alt="">
+                <p>預約賞車</p>
+                <button class="service_button"><a href="#">立即預約</a></button>
+            </div>
+            <div class="item_car">
+                <img src="figure/car3.png" alt="">
+                <p>訂製您的BMW</p>
+                <button class="service_button"><a href="#">立即訂製</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product1">
+        <img src="figure/BMW_5_1_NSC_WEBSITE_STILL_3000x3000-alternative_3to1.webp" alt="" class="car2">
+       <div class="product1_wrap">
+            <div class="item_2">
+                <h1>Upgrade Joy, Your Way.</h1>
+                <p>透過BMW ConnectedDrive雲端商店，升級個人化數位駕馭體驗！</p>
+                <button class="product1_button"><a href="#">立即前往</a></button>
+            </div>
+       </div>
+        <p>BMW提供多樣價格優惠的多種數位功能和服務套裝在 BMW ConnectedDrive雲端商店中，您可以針對您的BMW訂購數位服務與額外服務，或者續訂服務，以豪華駕駛實現駕馭奇想，盡情享受BMW智慧互連駕駛服務！</p>
+    </div>
+
+    <div class="product2">
+        <img src="figure/g26_bev_stage_dsk_fb_16to7.webp" alt="" class="car3">
+        <div class="product2_wrap">
+            <div class="product2_text">
+                <p>THE NEW</p>
+                <P class="i4">i4</P>
+                <div class="content"><img src="figure/BMW_i_.png" alt=""><p>全新BMW i4純電轎跑</p></div>
+                <button class="product2_button"><a href="#">瞭解更多</a></button>
+            </div>
+        </div>   
+    </div>
+
+    <div class="product3">
+        <img src="figure/1112_BEV_3000x3000_16to7.webp" alt="" class="car4">
+        <div class="product3_wrap">
+            <div class="product3_text">
+                <h1>BMW純電駕馭樂趣</h1>
+                <div class="content_2"><img src="figure/BMW_i_.png" alt=""><p>BMW電動車｜100% Electric</p></div>
+                <button class="product3_button"><a href="#">瞭解更多</a></button>
+            </div>
+        </div>   
+    </div>
+
+    <div class="product4">
+        <div class="product4_wrap">
+            <div class="item pic">
+                <img src="figure/bmw-index-accessories.jpeg" alt="">
+            </div>
+            <div class="item text">
+                <h1>BMW行車紀錄器3.0 PRO</h1>
+                <p>高解析畫質及多項智慧操作功能，提供絕佳車輛保護，為您車輛安全面面守護</p>
+                <strong><a href="#">瞭解更多</a></strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="path">
+        <div class="wrap_allcar">
+            <p>BMW全車系選單頁</p>
+            <strong><a href="#" class="allcar">所有車型</a></strong>
+        </div>
+        <div class="path_wrap">
+            <div class="wrap_item">
+                <div class="item">
+                    <p>了解更多BMW</p>
+                    <a href="#"><h4>企業理念</h4></a>
+                    <a href="#"><h4>企業客戶專案</h4></a>
+                    <a href="#"><h4>Diplomatic Sales</h4></a>
+                    <a href="#"><h4>Motorrad摩托車</h4></a>
+                    <a href="#"><h4>財盟租賃服務</h4></a>
+                </div>
+                <div class="item">
+                    <p>下載專區</p>
+                    <a href="#"><h4>規格配備表下載</h4></a>
+                    <a href="#"><h4>月曆下載</h4></a>
+                    <a href="#"><h4>BMW車主雜誌下載</h4></a>
+                </div>
+                <div class="item">
+                    <p>其他</p>
+                    <a href="#"><h4>聯絡我們</h4></a>
+                    <a href="#"><h4>獲得BMW最新消息</h4></a>
+                    <a href="#"><h4>法律聲明與Cookie政策</h4></a>
+                </div>
+            </div>
+            <div class="website">
+                <a href="#"><img src="figure/facebook.png" alt=""></a>
+                <a href="#"><img src="figure/instagram.png" alt=""></a>
+                <a href="#"><img src="figure/youtube.png" alt=""></a>
+                <a href="#"><img src="figure/linkedin.png" alt=""></a>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="footer">
+        <div class="copy">
+            &copy; BMW 台灣總代理 汎德 2024
+        </div>
+        <div class="item">
+            <a href="#">法律聲明</a>
+            <a href="#">Cookies</a>
+        </div>
+    </div>
+    
+</body>
+</html>
